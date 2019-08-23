@@ -7,7 +7,9 @@ import com.couchbase.client.java.document.JsonDocument;
 import com.couchbase.client.java.document.json.JsonObject;
 import com.couchbase.client.java.env.CouchbaseEnvironment;
 import com.couchbase.client.java.env.DefaultCouchbaseEnvironment;
-import com.couchbase.client.java.query.*;
+import com.couchbase.client.java.query.N1qlQuery;
+import com.couchbase.client.java.query.N1qlQueryResult;
+import com.couchbase.client.java.query.N1qlQueryRow;
 import lombok.NonNull;
 import rx.Observable;
 import rx.functions.Func1;
@@ -78,9 +80,8 @@ public class DocumentLoader {
 
         // Perform a N1QL Query
         N1qlQueryResult result = bucket.query(
+                //Just query all the values from the bucket
                 N1qlQuery.simple("SELECT * FROM `default`")
-                /*N1qlQuery.parameterized("SELECT name FROM `default` WHERE $1 IN interests",
-                        JsonArray.from("African Swallows"))*/
         );
 
         // Print each found Row
@@ -88,26 +89,6 @@ public class DocumentLoader {
             // Prints {"name":"Arthur"}
             System.out.println(row);
         }
-
-
-        /*// Perform a N1QL Query
-        /*N1qlQueryResult result = bucket.query(
-                N1qlQuery.simple("SELECT name FROM `default`")
-                /*N1qlQuery.parameterized("SELECT name FROM `default` WHERE $1 IN interests",
-                        JsonArray.from("African Swallows"))*
-        //);
-        bucket.async()
-                .query(Select.select("*").from(bucketName).limit(10))
-                .flatMap(result ->
-                        result.errors()
-                                .flatMap(e -> Observable.<AsyncN1qlQueryRow>error(new CouchbaseException("N1QL Error/Warning: " + e)))
-                                .switchIfEmpty(result.rows())
-                )
-                .map(AsyncN1qlQueryRow::value)
-                .subscribe(
-                        rowContent -> System.out.println(rowContent),
-                        runtimeError -> runtimeError.printStackTrace()
-                );*/
     }
 
     public JsonDocument getDocumentById(@NonNull final String bucketName, @NonNull final String documentId) {
