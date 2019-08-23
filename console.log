@@ -1,0 +1,114 @@
+Aug 23, 2019 3:47:46 PM com.couchbase.client.core.CouchbaseCore <init>
+INFO: CouchbaseEnvironment: {sslEnabled=false, sslKeystoreFile='null', sslTruststoreFile='null', sslKeystorePassword=false, sslTruststorePassword=false, sslKeystore=null, sslTruststore=null, bootstrapHttpEnabled=true, bootstrapCarrierEnabled=true, bootstrapHttpDirectPort=8091, bootstrapHttpSslPort=18091, bootstrapCarrierDirectPort=11210, bootstrapCarrierSslPort=11207, ioPoolSize=4, computationPoolSize=5, responseBufferSize=16384, requestBufferSize=16384, kvServiceEndpoints=1, viewServiceEndpoints=12, queryServiceEndpoints=12, searchServiceEndpoints=12, configPollInterval=2500, configPollFloorInterval=50, networkResolution=NetworkResolution{name='auto'}, ioPool=NioEventLoopGroup, kvIoPool=null, viewIoPool=null, searchIoPool=null, queryIoPool=null, analyticsIoPool=null, coreScheduler=CoreScheduler, memcachedHashingStrategy=DefaultMemcachedHashingStrategy, eventBus=DefaultEventBus, packageNameAndVersion=couchbase-java-client/2.7.9 (git: 2.7.9, core: 1.7.9), retryStrategy=BestEffort, maxRequestLifetime=75000, retryDelay=ExponentialDelay{growBy 1.0 MICROSECONDS, powers of 2; lower=100, upper=100000}, reconnectDelay=ExponentialDelay{growBy 1.0 MILLISECONDS, powers of 2; lower=32, upper=4096}, observeIntervalDelay=ExponentialDelay{growBy 1.0 MICROSECONDS, powers of 2; lower=10, upper=100000}, keepAliveInterval=30000, continuousKeepAliveEnabled=true, keepAliveErrorThreshold=4, keepAliveTimeout=2500, autoreleaseAfter=2000, bufferPoolingEnabled=true, tcpNodelayEnabled=true, mutationTokensEnabled=true, socketConnectTimeout=1000, callbacksOnIoPool=false, disconnectTimeout=25000, requestBufferWaitStrategy=com.couchbase.client.core.env.DefaultCoreEnvironment$4@7921b0a2, certAuthEnabled=false, coreSendHook=null, forceSaslPlain=false, compressionMinRatio=0.83, compressionMinSize=32, compressionEnabled=true, operationTracingEnabled=true, operationTracingServerDurationEnabled=true, tracer=ThresholdLogTracer, orphanResponseReportingEnabled=true, orphanResponseReporter=DefaultOrphanResponseReporter, keyValueServiceConfig=KeyValueServiceConfig{minEndpoints=1, maxEndpoints=1, pipelined=true, idleTime=0}, queryServiceConfig=QueryServiceConfig{minEndpoints=0, maxEndpoints=12, pipelined=false, idleTime=300}, searchServiceConfig=SearchServiceConfig{minEndpoints=0, maxEndpoints=12, pipelined=false, idleTime=300}, viewServiceConfig=ViewServiceConfig{minEndpoints=0, maxEndpoints=12, pipelined=false, idleTime=300}, analyticsServiceConfig=AnalyticsServiceConfig{minEndpoints=0, maxEndpoints=12, pipelined=false, idleTime=300}, queryTimeout=75000, viewTimeout=75000, searchTimeout=75000, analyticsTimeout=75000, kvTimeout=2500, connectTimeout=5000, dnsSrvEnabled=false, propagateParentSpan=true}
+Insert 100 documents with arbitrary values.
+Aug 23, 2019 3:47:52 PM com.couchbase.client.core.node.CouchbaseNode signalConnected
+INFO: Connected to Node localhost
+Aug 23, 2019 3:47:52 PM com.couchbase.client.core.config.DefaultConfigurationProvider upsertBucketConfig
+INFO: Selected network configuration: default
+Aug 23, 2019 3:47:52 PM com.couchbase.client.core.config.DefaultConfigurationProvider$8 call
+INFO: Opened bucket default
+Print all the inserted documents in the bucket:
+Fetching all the documents from Bucket - default
+{"default":{"creationTime":1566593272802,"author":"Administrator","id":"9cabd369-05b5-4c6f-a2b2-b0b1f322bb0f"}}
+{"default":{"creationTime":1566593272803,"author":"Administrator","id":"2fc8184d-54e2-42f3-a57d-3c32e8a8c15e"}}
+{"default":{"creationTime":1566593272803,"author":"Administrator","id":"a2d05c46-d450-4b35-be45-ebc862d6bfd9"}}
+{"default":{"creationTime":1566593272803,"author":"Administrator","id":"9a8e334c-1baa-4059-b348-258f144cb638"}}
+{"default":{"creationTime":1566593272803,"author":"Administrator","id":"b2adb31a-6e39-4cad-9b5e-84abc2e1f5a3"}}
+{"default":{"creationTime":1566593272803,"author":"Administrator","id":"5188e5b3-6e54-498d-956d-17882111dcb8"}}
+{"default":{"creationTime":1566593272803,"author":"Administrator","id":"11d7035a-dc06-4d85-a962-73b8a89667c7"}}
+{"default":{"creationTime":1566593272803,"author":"Administrator","id":"d09b0adb-94dd-4dc2-b921-d461ba1d690a"}}
+{"default":{"creationTime":1566593272803,"author":"Administrator","id":"3503dc8b-74c2-43dc-8551-5bb8f399ca68"}}
+{"default":{"creationTime":1566593272803,"author":"Administrator","id":"7e8c25f5-5fdd-48c5-9332-7921311b947b"}}
+{"default":{"creationTime":1566593272803,"author":"Administrator","id":"d5e1cf44-0515-4ffe-a5ff-5b1147535463"}}
+{"default":{"creationTime":1566593272803,"author":"Administrator","id":"279569b1-4681-4b3b-9093-8e767cfa6cd9"}}
+{"default":{"creationTime":1566593272803,"author":"Administrator","id":"04bc1cdb-1355-48e3-a4e4-58da54cc9579"}}
+{"default":{"creationTime":1566593272803,"author":"Administrator","id":"b1f525d0-6f0f-4366-8fbe-c7c8d076f129"}}
+{"default":{"creationTime":1566593272803,"author":"Administrator","id":"50126ece-0793-455e-bb97-5b17c439b212"}}
+{"default":{"creationTime":1566593272803,"author":"Administrator","id":"447c752c-e54e-4587-8232-0aa8cf4e0f68"}}
+{"default":{"creationTime":1566593272803,"author":"Administrator","id":"e26d193f-85b4-497f-bdb6-d1384e0ecd04"}}
+{"default":{"creationTime":1566593272803,"author":"Administrator","id":"0f7a88ee-0227-4413-8473-14fe42bd2c99"}}
+{"default":{"creationTime":1566593272803,"author":"Administrator","id":"bd8a6ac9-b9ea-4e08-82c7-dc943f9e13c0"}}
+{"default":{"creationTime":1566593272803,"author":"Administrator","id":"2df2d19f-cd0c-4c5c-8f3b-1a25ba100251"}}
+{"default":{"creationTime":1566593272803,"author":"Administrator","id":"a4efd319-e9a8-4410-9b4a-a1415339c30f"}}
+{"default":{"creationTime":1566593272803,"author":"Administrator","id":"3573420d-069f-4960-a150-960fe81cb294"}}
+{"default":{"creationTime":1566593272803,"author":"Administrator","id":"b762f7f8-0dad-416f-8dc8-bff405950254"}}
+{"default":{"creationTime":1566593272803,"author":"Administrator","id":"f403457d-89fe-413d-ba9b-728ebb281410"}}
+{"default":{"creationTime":1566593272803,"author":"Administrator","id":"7749b88e-af00-4cec-9a03-629ee09415df"}}
+{"default":{"creationTime":1566593272803,"author":"Administrator","id":"b4efd1a4-b40c-4ff2-9f3d-509fb3582eb9"}}
+{"default":{"creationTime":1566593272803,"author":"Administrator","id":"fa955bec-9dcd-4f12-b943-0bdba259cd27"}}
+{"default":{"creationTime":1566593272803,"author":"Administrator","id":"ba12cdda-990b-403b-8623-adc64cb3012b"}}
+{"default":{"creationTime":1566593272803,"author":"Administrator","id":"320315fb-5d21-4102-a1f7-220ae9df5439"}}
+{"default":{"creationTime":1566593272803,"author":"Administrator","id":"484708ca-afbc-46c4-a39c-d5eba12aa467"}}
+{"default":{"creationTime":1566593272803,"author":"Administrator","id":"40292ae3-db46-4261-9326-f6c454a62a44"}}
+{"default":{"creationTime":1566593272803,"author":"Administrator","id":"11712d91-e3ba-4ae7-b8e0-64164d359e15"}}
+{"default":{"creationTime":1566593272806,"author":"Administrator","id":"fefad7cb-8927-4982-a667-4665ccaaac0e"}}
+{"default":{"creationTime":1566593272806,"author":"Administrator","id":"be7beda4-6170-41c5-919d-b1ee7d6a9d76"}}
+{"default":{"creationTime":1566593272803,"author":"Administrator","id":"f496bb11-c1c7-4b5a-b29c-334c4391ac64"}}
+{"default":{"creationTime":1566593272806,"author":"Administrator","id":"9ea502aa-7283-44e1-acb4-82fbdd153d12"}}
+{"default":{"creationTime":1566593272806,"author":"Administrator","id":"a7622a02-f697-46e4-b3c5-00c49449eff7"}}
+{"default":{"creationTime":1566593272806,"author":"Administrator","id":"5c9013de-717c-4049-9324-05f0037bdbbd"}}
+{"default":{"creationTime":1566593272806,"author":"Administrator","id":"0d745b1e-c898-4bcc-808e-214e421b6946"}}
+{"default":{"creationTime":1566593272806,"author":"Administrator","id":"4ae08723-865d-432b-b031-7aecc41f4e68"}}
+{"default":{"creationTime":1566593272806,"author":"Administrator","id":"86eb2470-bfe4-4975-9f71-fb134099c405"}}
+{"default":{"creationTime":1566593272806,"author":"Administrator","id":"b07ee3b6-da5d-4c30-89c3-78e2206b0f5b"}}
+{"default":{"creationTime":1566593272806,"author":"Administrator","id":"9f35ddd0-da9f-412c-81f5-1b5e86d82213"}}
+{"default":{"creationTime":1566593272806,"author":"Administrator","id":"e877b53d-319b-4a17-a32c-f50e50b8dda4"}}
+{"default":{"creationTime":1566593272806,"author":"Administrator","id":"20ece022-0833-402c-9771-82793c7ac472"}}
+{"default":{"creationTime":1566593272803,"author":"Administrator","id":"45c2f43e-59d8-4224-8d5e-24aea24833c7"}}
+{"default":{"creationTime":1566593272806,"author":"Administrator","id":"c99a4be2-119b-4f75-a6f3-9d36cc3fe68c"}}
+{"default":{"creationTime":1566593272806,"author":"Administrator","id":"557993d7-eb46-4769-93a3-8670f286a713"}}
+{"default":{"creationTime":1566593272806,"author":"Administrator","id":"3a841ef0-c5ca-42b6-ae6d-8c1c58366b4e"}}
+{"default":{"creationTime":1566593272806,"author":"Administrator","id":"7d015dcd-ba23-4b00-9c86-d8542b03006e"}}
+{"default":{"creationTime":1566593272806,"author":"Administrator","id":"9703f153-740f-41f2-93a9-ed4d6769dc11"}}
+{"default":{"creationTime":1566593272806,"author":"Administrator","id":"b3833dbd-aa5d-44a6-8dc0-687636b37f8b"}}
+{"default":{"creationTime":1566593272806,"author":"Administrator","id":"4625b2d9-6c92-4893-ac28-49b0b31ddeba"}}
+{"default":{"creationTime":1566593272806,"author":"Administrator","id":"1a007dda-97a2-49f5-9902-f198704acc79"}}
+{"default":{"creationTime":1566593272806,"author":"Administrator","id":"ea50d3a5-b380-4ddd-802d-cecc38caab28"}}
+{"default":{"creationTime":1566593272806,"author":"Administrator","id":"23dde811-2e99-46cc-a4a9-b47b887cb729"}}
+{"default":{"creationTime":1566593272803,"author":"Administrator","id":"545802af-64b7-401b-b98d-d593d4a4758a"}}
+{"default":{"creationTime":1566593272806,"author":"Administrator","id":"a377c5d2-f809-4c5e-bdbb-5c75b8f95bd5"}}
+{"default":{"creationTime":1566593272806,"author":"Administrator","id":"77698663-a516-4821-bbb9-becb1396a276"}}
+{"default":{"creationTime":1566593272806,"author":"Administrator","id":"a3c4f2b2-92af-4901-b0fc-03f4c0414c38"}}
+{"default":{"creationTime":1566593272806,"author":"Administrator","id":"e84c0523-cbc6-479f-9bc5-77152c79271a"}}
+{"default":{"creationTime":1566593272806,"author":"Administrator","id":"3468ed5c-2252-4a46-9e24-eec8a6d03c19"}}
+{"default":{"creationTime":1566593272806,"author":"Administrator","id":"51203529-e810-44b4-9281-063a83d01129"}}
+{"default":{"creationTime":1566593272806,"author":"Administrator","id":"a79bac1e-428c-4274-b644-ff03a3ed0ffb"}}
+{"default":{"creationTime":1566593272806,"author":"Administrator","id":"f6d195cf-7b78-45ea-a39b-36000926e4df"}}
+{"default":{"creationTime":1566593272806,"author":"Administrator","id":"884f922f-b003-45c2-831a-148fe575bb33"}}
+{"default":{"creationTime":1566593272806,"author":"Administrator","id":"854b77ec-eb83-4518-9e6b-89d006c25166"}}
+{"default":{"creationTime":1566593272803,"author":"Administrator","id":"01d75b34-ea38-4c4c-ae5a-394fdd9850a0"}}
+{"default":{"creationTime":1566593272806,"author":"Administrator","id":"d7b12d19-5d6b-46d2-9fab-2c43b54af0a4"}}
+{"default":{"creationTime":1566593272806,"author":"Administrator","id":"f95e5f35-ba49-42f3-9e95-283f25b7ba7c"}}
+{"default":{"creationTime":1566593272806,"author":"Administrator","id":"dcbef102-7a88-4d37-8ce3-d9901a9c6de4"}}
+{"default":{"creationTime":1566593272806,"author":"Administrator","id":"357ff75a-f6ed-4d0a-b408-4e16aa1e7d78"}}
+{"default":{"creationTime":1566593272806,"author":"Administrator","id":"8cf6cd44-ef46-46b0-8f87-7740a99c36ff"}}
+{"default":{"creationTime":1566593272806,"author":"Administrator","id":"958ffcde-3e88-4fc4-9361-e36b01ff0101"}}
+{"default":{"creationTime":1566593272807,"author":"Administrator","id":"76ab1b44-39d9-450d-9237-d7bf7fbc77ad"}}
+{"default":{"creationTime":1566593272807,"author":"Administrator","id":"a932cc8d-1077-44da-baf7-0bace07ca1ad"}}
+{"default":{"creationTime":1566593272807,"author":"Administrator","id":"84cca180-25cf-4d86-95c7-18174439c201"}}
+{"default":{"creationTime":1566593272807,"author":"Administrator","id":"09a465b5-9aad-407b-9ce7-972f6f9bc031"}}
+{"default":{"creationTime":1566593272803,"author":"Administrator","id":"0a592f11-1abc-47a0-805a-6e7343e791a2"}}
+{"default":{"creationTime":1566593272807,"author":"Administrator","id":"d38e0401-2b45-40a7-a4eb-a1dd116f789f"}}
+{"default":{"creationTime":1566593272807,"author":"Administrator","id":"d316b94f-4ce2-4a0b-82c6-6d58a3d39de6"}}
+{"default":{"creationTime":1566593272807,"author":"Administrator","id":"363649e3-6f05-4965-a31a-e7f20a667359"}}
+{"default":{"creationTime":1566593272807,"author":"Administrator","id":"45b8b3d5-57db-4525-8310-2a73fbf892a3"}}
+{"default":{"creationTime":1566593272807,"author":"Administrator","id":"8ad24987-71b5-48ee-85ca-6e75e5951616"}}
+{"default":{"creationTime":1566593272807,"author":"Administrator","id":"1ba3d710-2064-45f2-92e0-af7f37da4650"}}
+{"default":{"creationTime":1566593272807,"author":"Administrator","id":"efd34977-a9b8-44f1-9eaf-413cb24969a7"}}
+{"default":{"creationTime":1566593272807,"author":"Administrator","id":"6fe3de02-caf1-49e3-a4ba-77f88f08d65a"}}
+{"default":{"creationTime":1566593272807,"author":"Administrator","id":"c7b6f847-caa3-4813-9bd8-231765115809"}}
+{"default":{"creationTime":1566593272807,"author":"Administrator","id":"8daf1bd6-a69d-448d-8367-b585c442628b"}}
+{"default":{"creationTime":1566593272803,"author":"Administrator","id":"996ad38a-6fcb-4163-a835-22e99a2c70a8"}}
+{"default":{"creationTime":1566593272807,"author":"Administrator","id":"557ec27c-32ab-4ad6-a3a4-410ae2cf782a"}}
+{"default":{"creationTime":1566593272807,"author":"Administrator","id":"2fb14410-7645-4bda-a7c3-8a1dcc730b85"}}
+{"default":{"creationTime":1566593272807,"author":"Administrator","id":"d7b4c64f-ebc3-4e1a-b054-71b6924a862f"}}
+{"default":{"creationTime":1566593272807,"author":"Administrator","id":"783a5d98-f097-4f56-b18a-6d3af18f936e"}}
+{"default":{"creationTime":1566593272807,"author":"Administrator","id":"96174014-0d1a-455a-b273-d83240d12a0f"}}
+{"default":{"creationTime":1566593272807,"author":"Administrator","id":"67d6d2a3-0cdb-4a7d-b6ff-0f439cc2f118"}}
+{"default":{"creationTime":1566593272807,"author":"Administrator","id":"bad665dd-9177-4948-bbdb-3b186e0b52c4"}}
+{"default":{"creationTime":1566593272807,"author":"Administrator","id":"9bbb2313-3a94-4b67-82e7-769ea62d3da3"}}
+{"default":{"creationTime":1566593272807,"author":"Administrator","id":"5a9b9780-7598-4bda-afe6-e1bba0f2448e"}}
+{"default":{"creationTime":1566593272807,"author":"Administrator","id":"dd797739-00ce-4d98-b98a-07d2f62b7888"}}
+Document by id: JsonDocument{id='document-1', cas=1566593272852512768, expiry=0, content={"creationTime":1566593272803,"author":"Administrator","id":"2fc8184d-54e2-42f3-a57d-3c32e8a8c15e"}, mutationToken=null}
+
+Process finished with exit code 0
